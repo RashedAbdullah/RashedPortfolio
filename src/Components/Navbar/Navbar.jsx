@@ -1,72 +1,89 @@
 import { IoIosSunny } from "react-icons/io";
-import './Navbar.css';
-import { NavLink } from "react-router-dom";
+import "./Navbar.css";
+import { NavLink, useNavigate } from "react-router-dom";
 import { createContext, useState } from "react";
 import App from "../../App";
-import LightAndDark from './../LightDark/LightAndDark';
-import { useTranslation } from 'react-i18next';
+import LightAndDark from "./../LightDark/LightAndDark";
+import { useTranslation } from "react-i18next";
+import logo from "../../assets/Img/namlogoforwebsite.jpg";
 
-  export const GlobalContext = createContext();
+export const GlobalContext = createContext();
 
-function Header({setArClass}) {
-
+function Header({ setArClass }) {
   const [isLight, setIsLight] = useState(false);
+  const navigate = useNavigate();
 
-  const handleDarkMode = ()=>{
-    setIsLight(false)
-  }
+  const handleDarkMode = () => {
+    setIsLight(false);
+  };
 
-  const handleLightMode = ()=>{
-    setIsLight(true)
-  }
+  const handleLightMode = () => {
+    setIsLight(true);
+  };
 
   const lightAndDarkObj = {
     isLight,
-    setIsLight
-  }
+    setIsLight,
+  };
 
-  const {t, i18n} = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
   };
-  const enFunc = ()=>{
+  const enFunc = () => {
     changeLanguage("en");
     setArClass(false);
-  }
-  const arFunc = ()=>{
+  };
+  const arFunc = () => {
     changeLanguage("ar");
     setArClass(true);
-  }
+  };
   return (
-   <div className="MainNavbarDiv">
+    <div className="MainNavbarDiv">
       <header>
         <div className="logo">
-          <a href="">Logo</a>
+          <img onClick={() => navigate("/")} src={logo} alt="website logo" />
         </div>
         <div className="navigations">
           <ul>
-            <li><NavLink to="/">{t("home")}</NavLink></li>
-            <li><NavLink to="/project">{t("projects")}</NavLink></li>
-            <li><NavLink to="/blog">{t("blogs")}</NavLink></li>
-            <li><NavLink to="/contact">{t("contact")}</NavLink></li>
-            <li><NavLink to="/about">{t("about")}</NavLink></li>
+            <li>
+              <NavLink to="/">{t("home")}</NavLink>
+            </li>
+            <li>
+              <NavLink to="/project">{t("projects")}</NavLink>
+            </li>
+            <li>
+              <NavLink to="/blog">{t("blogs")}</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact">{t("contact")}</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about">{t("about")}</NavLink>
+            </li>
           </ul>
         </div>
         <div className="LangsAndDarkMode">
-            <div className="Languages">
-              <div className="english"><button onClick={enFunc}>English</button></div>
-              <div className="arabic"><button onClick={arFunc}>العربية</button></div>
+          <div className="Languages">
+            <div className="english">
+              <button onClick={enFunc}>English</button>
             </div>
-            <div className="DarkMode">
-              <p onClick={isLight ? handleDarkMode : handleLightMode}><IoIosSunny /></p>
+            <div className="arabic">
+              <button onClick={arFunc}>العربية</button>
             </div>
-            </div>
+          </div>
+          <div className="DarkMode">
+            <p onClick={isLight ? handleDarkMode : handleLightMode}>
+              <IoIosSunny />
+            </p>
+          </div>
+        </div>
       </header>
 
-    <GlobalContext.Provider value={lightAndDarkObj}></GlobalContext.Provider>
+      <GlobalContext.Provider value={lightAndDarkObj}></GlobalContext.Provider>
       <LightAndDark />
-   </div>
+    </div>
   );
 }
 
