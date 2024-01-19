@@ -1,10 +1,18 @@
 [
     {
         "id": 1,
-        "title": "",
-        "desc": "",
+        "title": "TodoList (React.js)",
+        "desc": "CRUD Operations (Create, Delete, Update, saved data in localStarage, useReducer hook for data transfer between components).",
         "img": "../../../assets/Img/codeimg.png",
-        "github": "",
-        "live": ""
+        "github": "https://github.com/RashedAbdullah/task-managment",
+        "live": "https://task-managment-ten.vercel.app"
+    },
+    {
+        "id": 2,
+        "title": "TodoList (React.js)",
+        "desc": "CRUD Operations (Create, Delete, Update, saved data in localStarage, useReducer hook for data transfer between components).",
+        "img": "../../../assets/Img/codeimg.png",
+        "github": "https://github.com/RashedAbdullah/task-managment",
+        "live": "https://task-managment-ten.vercel.app"
     }
 ]

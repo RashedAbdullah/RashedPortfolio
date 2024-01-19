@@ -1,30 +1,16 @@
 import { IoIosSunny } from "react-icons/io";
 import "./Navbar.css";
 import { NavLink, useNavigate } from "react-router-dom";
-import { createContext, useState } from "react";
-import App from "../../App";
-import LightAndDark from "./../LightDark/LightAndDark";
+import { createContext } from "react";
+
 import { useTranslation } from "react-i18next";
 import logo from "../../assets/Img/namlogoforwebsite.jpg";
 
 export const GlobalContext = createContext();
 
 function Header({ setArClass }) {
-  const [isLight, setIsLight] = useState(false);
   const navigate = useNavigate();
 
-  const handleDarkMode = () => {
-    setIsLight(false);
-  };
-
-  const handleLightMode = () => {
-    setIsLight(true);
-  };
-
-  const lightAndDarkObj = {
-    isLight,
-    setIsLight,
-  };
 
   const { t, i18n } = useTranslation();
 
@@ -39,6 +25,7 @@ function Header({ setArClass }) {
     changeLanguage("ar");
     setArClass(true);
   };
+
   return (
     <div className="MainNavbarDiv">
       <header>
@@ -74,15 +61,12 @@ function Header({ setArClass }) {
             </div>
           </div>
           <div className="DarkMode">
-            <p onClick={isLight ? handleDarkMode : handleLightMode}>
+            <p>
               <IoIosSunny />
             </p>
           </div>
         </div>
       </header>
-
-      <GlobalContext.Provider value={lightAndDarkObj}></GlobalContext.Provider>
-      <LightAndDark />
     </div>
   );
 }
