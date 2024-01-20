@@ -9,6 +9,38 @@
     },
     {
         "id": 2,
+        "title": "TodoList (Vanilla javascript)",
+        "desc": "CRUD Operations (Create, Delete, Update, saved data in localStarage, useReducer hook for data transfer between components).",
+        "img": "../../../assets/Img/codeimg.png",
+        "github": "https://github.com/RashedAbdullah/LogicBuild/tree/main/TodoList",
+        "live": "https://logic-build.vercel.app"
+    },
+    {
+        "id": 3,
+        "title": "TodoList (React.js)",
+        "desc": "CRUD Operations (Create, Delete, Update, saved data in localStarage, useReducer hook for data transfer between components).",
+        "img": "../../../assets/Img/codeimg.png",
+        "github": "https://github.com/RashedAbdullah/task-managment",
+        "live": "https://task-managment-ten.vercel.app"
+    },
+    {
+        "id": 4,
+        "title": "TodoList (React.js)",
+        "desc": "CRUD Operations (Create, Delete, Update, saved data in localStarage, useReducer hook for data transfer between components).",
+        "img": "../../../assets/Img/codeimg.png",
+        "github": "https://github.com/RashedAbdullah/task-managment",
+        "live": "https://task-managment-ten.vercel.app"
+    },
+    {
+        "id": 5,
+        "title": "TodoList (React.js)",
+        "desc": "CRUD Operations (Create, Delete, Update, saved data in localStarage, useReducer hook for data transfer between components).",
+        "img": "../../../assets/Img/codeimg.png",
+        "github": "https://github.com/RashedAbdullah/task-managment",
+        "live": "https://task-managment-ten.vercel.app"
+    },
+    {
+        "id": 6,
         "title": "TodoList (React.js)",
         "desc": "CRUD Operations (Create, Delete, Update, saved data in localStarage, useReducer hook for data transfer between components).",
         "img": "../../../assets/Img/codeimg.png",
