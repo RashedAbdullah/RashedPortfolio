@@ -1,94 +1,94 @@
 /* font-family: 'M PLUS Code Latin', monospace; */
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@200;300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@200;300;400&display=swap");
 
 /* font-family: 'Cairo', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.arabicFont .mainHeroDiv{
-    font-family: 'Aref Ruqaa', serif;
-    font-family: 'Cairo', sans-serif;
+.arabicFont .mainHeroDiv {
+  font-family: "Aref Ruqaa", serif;
+  font-family: "Cairo", sans-serif;
 }
 .mainHeroDiv {
-    height: 100vh;
-    font-family: 'M PLUS Code Latin', monospace;
+  height: 100vh;
+  font-family: "M PLUS Code Latin", monospace;
 }
 
 .threeDiv {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.centerHeroArea{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 90%;
+.centerHeroArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 90%;
 }
 
 .arabicFont .centerHeroArea {
-    direction: rtl;
+  direction: rtl;
 }
 
 .arabicFont .resumeDownload {
-    direction: ltr;
+  direction: ltr;
 }
 
 .centerHeroArea > div > h2 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .centerHeroArea > div > h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
-.centerHeroArea div h2 span, .centerHeroArea  div p span{
-    color: aqua;
+.centerHeroArea div h2 span,
+.centerHeroArea div p span {
+  color: aqua;
 }
 
 .heroPara p {
-    width: 40vw;
-    font-size: 1.2rem;
+  width: 40vw;
+  font-size: 1.2rem;
 }
 
 .resumeDownload {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .resumeDownload div span {
-    color: aqua;
-    padding-right: 5px;
-    transition: 0.5s;
+  color: aqua;
+  padding-right: 5px;
+  transition: 0.5s;
 }
 
 .resumeDownload div {
-    font-size: 1.3rem;
-    width: 180px;
-    padding: 5px 15px;
-    border-radius: 5px;
-    border: 1px solid aqua;
-    cursor: pointer;
-    margin: auto;
-    transition: 0.5s;
+  font-size: 1.3rem;
+  width: 180px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 1px solid aqua;
+  cursor: pointer;
+  margin: auto;
+  transition: 0.5s;
 }
 
 .resumeDownload div:hover {
-    background-color: aqua;
-    color: #121212;
+  background-color: aqua;
+  color: #121212;
 }
 
 @media (max-width: 700px) {
-    .SocialMediaBox {
-        display: none;
-    }
+  .SocialMediaBox {
+    display: none;
+  }
 }

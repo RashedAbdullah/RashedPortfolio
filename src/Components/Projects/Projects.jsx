@@ -10,7 +10,7 @@ const Projects = () => {
   const { t } = useTranslation();
   const [projects, setProjects] = useState(allProjects);
   return (
-    <div className="projectsMainDiv1">
+    <div dir="ltr" className="projectsMainDiv1">
       <div className="projectHead animate__animated animate__flipInX">
         <h2>{t("projects")}</h2>
       </div>

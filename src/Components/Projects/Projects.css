@@ -1,94 +1,91 @@
 /* font-family: 'M PLUS Code Latin', monospace; */
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@200;300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@200;300;400&display=swap");
 
 /* font-family: 'Noto Sans Mono', monospace; */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@700&display=swap");
 
 .projectsMainDiv1 {
-    font-family: 'M PLUS Code Latin', monospace;
-    padding: 50px; 
+  font-family: "M PLUS Code Latin", monospace;
+  padding: 50px;
 }
 
-.arabicFont .projectsMainDiv1 {
-    direction: rtl;
-    font-family: 'Cairo', sans-serif;
+.arabicFont .projectHead h2 {
+  font-family: "Cairo", sans-serif;
 }
 
 .projectsMainDiv1 > .projectHead {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
 }
 
 .projectHead h2 {
-    border-bottom: 1px solid white;
-    padding-bottom: 10px;
-    font-size: 2rem;
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+  font-size: 2rem;
 }
 
-
 .projectsMainDiv2 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
 }
 
 .projectsMainDiv2 > .ProjectCard {
-    padding: 30px;
-    height: 400px;
-    background-color: #0f0d0d;
-    border-radius: 10px;
-    margin-top: 20px;
-    transition: 0.5s;
+  padding: 30px;
+  height: 400px;
+  background-color: #0f0d0d;
+  border-radius: 10px;
+  margin-top: 20px;
+  transition: 0.5s;
 }
 
 .projectsMainDiv2 > .ProjectCard:hover {
-    background-color: #191717;
+  background-color: #191717;
 }
 
 .ProjectsDetailsBox {
-    padding: 5px 0;
-    font-size: 1.6rem;
+  padding: 5px 0;
+  font-size: 1.6rem;
 }
 
 .arabicFont .ProjectsDetailsBox h3 {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 .projectsImgBox > img {
-    width: 100%;
+  width: 100%;
 }
 
 .ProjectGithubAndLiveLink {
-    padding-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .ProjectGithubAndLiveLink a {
-    font-size: 20px;
-    color: white;
+  font-size: 20px;
+  color: white;
 }
 
 .projectInfo p {
-    font-size: 1.1em;
+  font-size: 1.1em;
 }
 
-.arabicFont .projectInfo p  {
-    font-size: 15px;
+.arabicFont .projectInfo p {
+  font-size: 15px;
 }
 
 @media (max-width: 1050px) {
-    .projectsMainDiv2 {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .projectsMainDiv2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 620px) {
-    .projectsMainDiv2 {
-        grid-template-columns: repeat(1, 1fr);
-    }
+  .projectsMainDiv2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
