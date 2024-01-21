@@ -7,10 +7,10 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #121212;
+/* body {
+    background-color: #ffffff;
     opacity: 1;
-    background-image: radial-gradient(circle at center center, #444cf7, #121212), repeating-radial-gradient(circle at center center, #444cf7, #444cf7, 4px, transparent 8px, transparent 4px);
+    background-image: radial-gradient(circle at center center, #ffffff, #ffffff), repeating-radial-gradient(circle at center center, #ffffff, #f3f3f3, 4px, transparent 8px, transparent 4px);
     background-blend-mode: multiply;
-    color: white;
-}
+    color: black;
+} */

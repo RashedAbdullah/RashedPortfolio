@@ -1,14 +1,11 @@
 import { IoIosSunny } from "react-icons/io";
 import "./Navbar.css";
 import { NavLink, useNavigate } from "react-router-dom";
-import { createContext, useState } from "react";
 
 import { useTranslation } from "react-i18next";
 import logo from "../../assets/Img/namlogoforwebsite.jpg";
 
-export const GlobalContext = createContext();
-
-function Header({ setArClass }) {
+function Header({ setArClass, setIsLight, isLight }) {
   const navigate = useNavigate();
 
   const { t, i18n } = useTranslation();
@@ -25,11 +22,8 @@ function Header({ setArClass }) {
     setArClass(true);
   };
 
-  const [isLight, setLight] = useState(false);
-
-  console.log(isLight);
   const handleLightDarkMode = () => {
-    setLight(!isLight);
+    setIsLight(!isLight);
   };
 
   return (

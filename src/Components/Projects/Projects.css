@@ -32,17 +32,12 @@
   gap: 80px;
 }
 
-.projectsMainDiv2 > .ProjectCard {
+.ProjectCard {
   padding: 30px;
   height: 400px;
-  background-color: #0f0d0d;
   border-radius: 10px;
   margin-top: 20px;
   transition: 0.5s;
-}
-
-.projectsMainDiv2 > .ProjectCard:hover {
-  background-color: #191717;
 }
 
 .ProjectsDetailsBox {
@@ -67,7 +62,6 @@
 
 .ProjectGithubAndLiveLink a {
   font-size: 20px;
-  color: white;
 }
 
 .projectInfo p {
