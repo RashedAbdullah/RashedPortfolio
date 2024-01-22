@@ -5,6 +5,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import logo from "../../assets/Img/namlogoforwebsite.jpg";
 
+// eslint-disable-next-line react/prop-types
 function Header({ setArClass, setIsLight, isLight }) {
   const navigate = useNavigate();
 

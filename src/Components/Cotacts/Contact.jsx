@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import "./Contact.css";
 import { FaRegUser } from "react-icons/fa6";
 import { MdOutlineEmail } from "react-icons/md";
@@ -14,7 +14,6 @@ import { context } from "../../context/Context";
 const Contact = () => {
   const { t } = useTranslation();
   const { isLight } = useContext(context);
-  const [lightMode, setLightMode] = useState(isLight);
 
   const dark = {
     backgroundColor: "",
@@ -41,7 +40,7 @@ const Contact = () => {
         </div>
         <div className="formAndConcatBox">
           <div
-            style={lightMode ? light : dark}
+            style={isLight ? light : dark}
             className="formbox animate__animated animate__fadeInUp"
           >
             <form action="">
@@ -87,7 +86,7 @@ const Contact = () => {
           </div>
 
           <div
-            style={lightMode ? light : dark}
+            style={isLight ? light : dark}
             className="ContactBox animate__animated animate__fadeInUp"
           >
             <div>
