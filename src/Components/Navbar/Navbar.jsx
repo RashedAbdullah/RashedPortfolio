@@ -33,7 +33,7 @@ function Header({ setArClass, setIsLight, isLight }) {
         <div className="logo">
           <img onClick={() => navigate("/")} src={logo} alt="website logo" />
         </div>
-        <div className="navigations">
+        <div className="navigations hidden lg:block">
           <ul>
             <li>
               <NavLink to="/">{t("home")}</NavLink>

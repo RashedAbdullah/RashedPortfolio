@@ -14,6 +14,7 @@ import { context } from "../../context/Context";
 const Contact = () => {
   const { t } = useTranslation();
   const { isLight } = useContext(context);
+  console.log(isLight);
 
   const dark = {
     backgroundColor: "",

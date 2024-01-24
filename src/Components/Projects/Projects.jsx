@@ -21,7 +21,7 @@ const Projects = () => {
     boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
   };
   const dark = {
-    backgroundColor: "#0d0d0d",
+    backgroundColor: "#1d1d1d",
     backgroundImage:
       "repeating-radial-gradient( circle at 0 0, transparent 0, #0d0d0d 4px ), repeating-linear-gradient( #13131355, #131313 )",
     opacity: "1",
