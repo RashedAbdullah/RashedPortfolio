@@ -26,10 +26,8 @@ const Hero1 = () => {
               </p>
             </div>
             <div className="resumeDownload animate__animated animate__fadeInUp">
-              <div>
-                <span>
-                  <ImDownload3 />
-                </span>
+              <div className="flex justify-center items-center gap-2">
+                <ImDownload3 />
                 {t("resume")}
               </div>
             </div>

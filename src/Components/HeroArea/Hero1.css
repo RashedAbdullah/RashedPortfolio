@@ -65,15 +65,14 @@
   margin-top: 10px;
 }
 
-.resumeDownload div span {
-  color: aqua;
-  padding-right: 5px;
+.resumeDownload div {
   transition: 0.5s;
 }
 
 .resumeDownload div {
   font-size: 1.3rem;
-  width: 180px;
+  color: aqua;
+  max-width:200px;
   padding: 5px 15px;
   border-radius: 5px;
   border: 1px solid aqua;

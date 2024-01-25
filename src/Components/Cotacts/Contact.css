@@ -25,7 +25,7 @@
 .contactHeadline {
   font-size: 1.8rem;
   text-align: center;
-  padding: 70px 0 30px 0;
+  padding: 40px 0 30px 0;
 }
 
 .arabicFont .contactHeadline {
@@ -34,6 +34,7 @@
 
 .formbox {
   width: 400px;
+  height: 500px;
   padding: 4vw;
 }
 
@@ -107,6 +108,7 @@ input::-webkit-inner-spin-button {
   flex-direction: column;
   gap: 40px;
   width: 400px;
+  height: 500px;
   font-size: 18px;
   transition: 0.5s;
 }

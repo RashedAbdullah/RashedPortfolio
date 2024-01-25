@@ -5,7 +5,7 @@ const About = () => {
   const { t } = useTranslation();
   return (
     <div className="mainAboutDiv">
-      <div className="aboutBox">
+      <div className="aboutBox animate__animated animate__fadeInDown">
         <h2>{t("aboutMe")}</h2>
         <p>
           {t("underAbout")} <span>{t("js")}</span> {t("and")}{" "}

@@ -45,31 +45,31 @@ const Contact = () => {
             className="formbox animate__animated animate__fadeInUp"
           >
             <form action="">
-              <div>
+              <div className="flex items-center">
                 <span>
                   <FaRegUser />
                 </span>
                 <input type="text" placeholder={t("palcename")} />
               </div>
-              <div>
+              <div className="flex items-center">
                 <span>
                   <MdOutlineEmail />
                 </span>
                 <input type="email" placeholder={t("placeMail")} />
               </div>
-              <div>
+              <div className="flex items-center">
                 <span>
                   <MdAddCall />
                 </span>
                 <input type="number" placeholder={t("placePhone")} />
               </div>
               <div className="msgBox">
-                <p>
+                <div className="flex items-center">
                   <span>
                     <LuMessageCircle />
                   </span>{" "}
                   {t("msg")}
-                </p>
+                </div>
               </div>
               <div>
                 <textarea
@@ -94,7 +94,7 @@ const Contact = () => {
               <p>{t("suggestion")}</p>
             </div>
             <div className="address">
-              <p>
+              <p className="flex">
                 <span className="locationIcon">
                   <FaLocationDot />
                 </span>{" "}
@@ -103,7 +103,7 @@ const Contact = () => {
             </div>
 
             <div className="mail">
-              <p>
+              <p className="flex">
                 <span className="mailIcon">
                   <FaTelegramPlane />
                 </span>{" "}
@@ -112,7 +112,7 @@ const Contact = () => {
             </div>
 
             <div className="phone">
-              <p>
+              <p className="flex">
                 <span className="phoneIcon">
                   <HiPhoneMissedCall />
                 </span>{" "}
@@ -121,7 +121,7 @@ const Contact = () => {
             </div>
 
             <div className="mail">
-              <p>
+              <p className="flex">
                 <span className="mailIcon">
                   <TiWorld />
                 </span>{" "}
