@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Popover } from "@headlessui/react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import MobileMenu from "./mobileMenu";
 import { navigations, navigationsAr } from "./navigations";
 import "./headerStyle.css";
@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 import { LuSunMoon } from "react-icons/lu";
 import { MdNightlight } from "react-icons/md";
 import SwitchLang from "./switchLang";
+import ScrollTo from "react-scroll-into-view";
 
 export default function Header({ setArClass, setIsLight, isLight }) {
   const [isOn, setIsOn] = useState(false);
@@ -91,29 +92,8 @@ export default function Header({ setArClass, setIsLight, isLight }) {
                   </button>
                 )}
 
-                {/* User info */}
-                <div className="ml-4 flex lg:ml-0">
-                  {/* {user ? (
-                <>
-                  <button onClick={() => navigate("/user")}>
-                    {user.photoURL ? (
-                      <img
-                        src={user.photoURL}
-                        alt="user profile"
-                        className="h-10 w-10 rounded-full"
-                      />
-                    ) : (
-                      <FaUserAlt size={"25px"} />
-                    )}
-                  </button>
-                </>
-              ) : (
-                <NavLink to="/signin">
-                  <span className="sr-only">sign in</span>
-                  <FaSignInAlt size={"25px"} />
-                </NavLink>
-              )} */}
-                </div>
+                {/* Logo */}
+                <div className="ml-4 flex lg:ml-0"></div>
 
                 {/* Flyout menus */}
                 <Popover.Group className="hidden lg:ml-8 lg:block lg:self-center">
@@ -123,32 +103,32 @@ export default function Header({ setArClass, setIsLight, isLight }) {
                   >
                     {isArabic
                       ? navigations.map((page) => (
-                          <NavLink
-                            key={page.name}
-                            to={page.navlink}
-                            className="flex items-center text-lg font-medium text-textWhite hover:text-gray-400 py-1 px-3 rounded"
-                          >
-                            {page.name}
-                          </NavLink>
+                          <Fragment key={page.name}>
+                            <ScrollTo selector={`#${page.name}`}>
+                              <button className="flex items-center text-lg font-medium text-textWhite hover:text-gray-400 py-1 px-3 rounded">
+                                {page.name}
+                              </button>
+                            </ScrollTo>
+                          </Fragment>
                         ))
                       : navigationsAr.map((page) => (
-                          <NavLink
-                            key={page.name}
-                            to={page.navlink}
-                            className="flex items-center text-lg font-medium text-textWhite hover:text-gray-400 py-1 px-3 rounded"
-                          >
-                            {page.name}
-                          </NavLink>
+                          <Fragment key={page.name}>
+                            <ScrollTo selector={`#${page.scroll}`}>
+                              <button className="flex items-center text-lg font-medium text-textWhite hover:text-gray-400 py-1 px-3 rounded">
+                                {page.name}
+                              </button>
+                            </ScrollTo>
+                          </Fragment>
                         ))}
                   </div>
                 </Popover.Group>
                 {/* Light and Dark */}
                 <div className="flex gap-5">
-                  <div>
-                    <SwitchTheme isOn={isOn} onClick={handleToggle} />
-                  </div>
                   <div className="hidden lg:block">
                     <SwitchLang isArabic={isArabic} onClick={switchLangAr} />
+                  </div>
+                  <div>
+                    <SwitchTheme isOn={isOn} onClick={handleToggle} />
                   </div>
                 </div>
               </div>

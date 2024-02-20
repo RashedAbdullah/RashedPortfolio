@@ -29,7 +29,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="projectsMainDiv1">
+    <div id="Projects" className="projectsMainDiv1 lg:p-20 p-10">
       <div className="projectHead  ">
         <h2>{t("projects")}</h2>
       </div>

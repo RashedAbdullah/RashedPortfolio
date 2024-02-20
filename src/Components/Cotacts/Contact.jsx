@@ -31,15 +31,21 @@ const Contact = () => {
   };
 
   return (
-    <div className="mainContactBox">
+    <div
+      id="Contact"
+      className="mainContactBox text-center mx-20 lg:p-28 min-h-screen lg:mx-0"
+    >
       <div>
-        <div className="contactHeadline">
-          <h3 className="projectHead  ">{t("talk")}</h3>
+        <div className="text-3xl m-5">
+          <h3>{t("talk")}</h3>
         </div>
-        <div className="formAndConcatBox">
-          <div style={isLight ? light : dark} className="formbox  ">
+        <div className="formAndConcatBox flex-col lg:flex-row flex m-auto align-middle items-center justify-center gap-1">
+          <div
+            style={isLight ? light : dark}
+            className="lg:w-[400px] w-[80vw] h-[500px] p-[4vw] formbox"
+          >
             <form action="">
-              <div className="flex items-center">
+              <div className="flex items-center ">
                 <span>
                   <FaRegUser />
                 </span>
@@ -72,21 +78,27 @@ const Contact = () => {
                   cols="30"
                   rows="5"
                   placeholder="Talk what you want..."
+                  className=" w-full resize-none bg-transparent border border-[#004545] text-lg outline-none p-2"
                 ></textarea>
               </div>
               <div>
-                <button>{t("submit")}</button>
+                <button className="w-full h-[28px] text-white bg-[#003b3b]">
+                  {t("submit")}
+                </button>
               </div>
             </form>
           </div>
 
-          <div style={isLight ? light : dark} className="ContactBox  ">
+          <div
+            style={isLight ? light : dark}
+            className="ContactBox  p-[4vw] flex flex-col gap-[40px] lg:w-[400px] w-[80vw] h-[500px] transition duration-300"
+          >
             <div>
-              <p>{t("suggestion")}</p>
+              <p className="text-center">{t("suggestion")}</p>
             </div>
             <div className="address">
-              <p className="flex">
-                <span className="locationIcon">
+              <p className="flex gap-5">
+                <span className="locationIcon text-lg">
                   <FaLocationDot />
                 </span>{" "}
                 {t("address")}
@@ -94,8 +106,8 @@ const Contact = () => {
             </div>
 
             <div className="mail">
-              <p className="flex">
-                <span className="mailIcon">
+              <p className="flex gap-5">
+                <span className="mailIcon text-lg">
                   <FaTelegramPlane />
                 </span>{" "}
                 {t("mail")}
@@ -103,7 +115,7 @@ const Contact = () => {
             </div>
 
             <div className="phone">
-              <p className="flex">
+              <p className="flex gap-5">
                 <span className="phoneIcon">
                   <HiPhoneMissedCall />
                 </span>{" "}
@@ -112,7 +124,7 @@ const Contact = () => {
             </div>
 
             <div className="mail">
-              <p className="flex">
+              <p className="flex gap-5">
                 <span className="mailIcon">
                   <TiWorld />
                 </span>{" "}

@@ -1,16 +1,13 @@
 export const navigations = [
-  { name: "Home", navlink: "/" },
-  { name: "Projects", navlink: "/project" },
-  { name: "Blogs", navlink: "/blog" },
-  { name: "Contact", navlink: "/contact" },
-  { name: "About", navlink: "/about" },
+  { name: "Home" },
+  { name: "Projects" },
+  { name: "Contact" },
+  { name: "About" },
 ];
 
-
 export const navigationsAr = [
-  { name: "الرسمية", navlink: "/" },
-  { name: "المشاريع", navlink: "/project" },
-  { name: "المدونات", navlink: "/blog" },
-  { name: "الاتصال", navlink: "/contact" },
-  { name: "حولي", navlink: "/about" },
+  { name: "الرسمية", scroll: "Home" },
+  { name: "المشاريع", scroll: "Projects" },
+  { name: "الاتصال", scroll: "Contact" },
+  { name: "حولي", scroll: "About" },
 ];

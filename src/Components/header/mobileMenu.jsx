@@ -2,9 +2,10 @@
 import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import { navigations, navigationsAr } from "./navigations";
 import SwitchLang from "./switchLang";
+import ScrollTo from "react-scroll-into-view";
 
 const MobileMenu = ({ open, setOpen, isArabic, switchLangAr }) => {
   return (
@@ -55,25 +56,27 @@ const MobileMenu = ({ open, setOpen, isArabic, switchLangAr }) => {
                   {isArabic
                     ? navigations?.map((page) => (
                         <div key={page.name} className="flow-root">
-                          <NavLink
-                            to={page.navlink}
-                            onClick={() => setOpen(false)}
-                            className="-m-2 block p-2 font-medium text-textWhite w-60 hover:bg-teal-950 transition "
-                          >
-                            {page.name}
-                          </NavLink>
+                          <ScrollTo selector={`#${page.name}`}>
+                            <button
+                              onClick={() => setOpen(false)}
+                              className="-m-2 block p-2 font-medium text-textWhite w-60 hover:bg-teal-950 transition "
+                            >
+                              {page.name}
+                            </button>
+                          </ScrollTo>
                         </div>
                       ))
                     : navigationsAr?.map((page) => (
-                        <div key={page.name} className="flow-root">
-                          <NavLink
-                            to={page.navlink}
-                            onClick={() => setOpen(false)}
-                            className="-m-2 block p-2 font-medium text-textWhite w-60 hover:bg-teal-950 transition "
-                          >
-                            {page.name}
-                          </NavLink>
-                        </div>
+                      <div key={page.name} className="flow-root">
+                      <ScrollTo selector={`#${page.scroll}`}>
+                        <button
+                          onClick={() => setOpen(false)}
+                          className="-m-2 block p-2 font-medium text-textWhite w-60 hover:bg-teal-950 transition "
+                        >
+                          {page.name}
+                        </button>
+                      </ScrollTo>
+                    </div>
                       ))}
                   <div className="flex items-center justify-center">
                     <SwitchLang isArabic={isArabic} onClick={switchLangAr} />

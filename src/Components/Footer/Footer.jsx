@@ -3,7 +3,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {
@@ -54,19 +54,19 @@ const Footer = () => {
         <div className="footerNavLinks hidden lg:block">
           <ul>
             <li>
-              <NavLink to="/">{t("home")}</NavLink>
+              <a href="/">{t("home")}</a>
             </li>
             <li>
-              <NavLink to="/project">{t("projects")}</NavLink>
+              <a href="/project">{t("projects")}</a>
             </li>
             <li>
-              <NavLink to="/blog">{t("blogs")}</NavLink>
+              <a href="/blog">{t("blogs")}</a>
             </li>
             <li>
-              <NavLink to="/contact">{t("contact")}</NavLink>
+              <a href="/contact">{t("contact")}</a>
             </li>
             <li>
-              <NavLink to="/about">{t("about")}</NavLink>
+              <a href="/about">{t("about")}</a>
             </li>
           </ul>
         </div>
