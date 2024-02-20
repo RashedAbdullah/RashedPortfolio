@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   z-index: 100;
+  transition: 0.3s;
 }
 
 .header-bg {
@@ -15,4 +16,72 @@
     #121212 0,
     #121212 50%
   );
+  transition: 0.3s;
+}
+
+.arabicFont .MainNavbarDiv {
+  font-family: "Aref Ruqaa", serif;
+}
+
+.arabicFont .navigations > ul {
+  direction: rtl;
+}
+
+.switch {
+  width: 60px;
+  border-radius: 100px;
+  padding: 5px;
+  display: flex;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.switchLang {
+  width: 100px;
+  border-radius: 100px;
+  padding: 5px;
+  display: flex;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.switch.on {
+  background-color: #22cc88;
+  justify-content: flex-end;
+  transition: 0.3s;
+}
+
+.switchLang.on {
+  background-color: #22cc88;
+  justify-content: flex-end;
+  transition: 0.3s;
+}
+
+.switch.off {
+  background-color: #dddddd;
+  justify-content: flex-start;
+  transition: 0.3s;
+}
+
+.switchLang.off {
+  background-color: #dddddd;
+  justify-content: flex-start;
+  transition: 0.3s;
+}
+
+.switch div {
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 200px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.02);
+  transition: 0.3s;
+}
+.switchLang div {
+  width: 60px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 200px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.02);
+  transition: 0.3s;
 }

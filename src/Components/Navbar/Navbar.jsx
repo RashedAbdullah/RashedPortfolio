@@ -7,7 +7,7 @@ import logo from "../../assets/Img/namlogoforwebsite.jpg";
 
 // eslint-disable-next-line react/prop-types
 function Header({ setArClass, setIsLight, isLight }) {
-  const navigate = useNavigate();
+
 
   const { t, i18n } = useTranslation();
 
@@ -31,7 +31,7 @@ function Header({ setArClass, setIsLight, isLight }) {
     <div className="MainNavbarDiv">
       <header>
         <div className="logo">
-          <img onClick={() => navigate("/")} src={logo} alt="website logo" />
+          <img  src={logo} alt="website logo" />
         </div>
         <div className="navigations hidden lg:block">
           <ul>

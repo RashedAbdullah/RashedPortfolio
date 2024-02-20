@@ -51,7 +51,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="footerNavLinks">
+        <div className="footerNavLinks hidden lg:block">
           <ul>
             <li>
               <NavLink to="/">{t("home")}</NavLink>

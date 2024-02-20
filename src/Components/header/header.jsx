@@ -1,23 +1,76 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
+import { useEffect, useState } from "react";
 import { Popover } from "@headlessui/react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
 import MobileMenu from "./mobileMenu";
-import { navigations } from "./navigations";
+import { navigations, navigationsAr } from "./navigations";
 import "./headerStyle.css";
+import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+import { LuSunMoon } from "react-icons/lu";
+import { MdNightlight } from "react-icons/md";
+import SwitchLang from "./switchLang";
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
-export default function Header() {
+export default function Header({ setArClass, setIsLight, isLight }) {
+  const [isOn, setIsOn] = useState(false);
+  const [isArabic, setIsArabic] = useState(true);
+  const { t, i18n } = useTranslation();
   const [open, setOpen] = useState(false);
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+  const enFunc = () => {
+    changeLanguage("en");
+    setArClass(false);
+  };
+  const arFunc = () => {
+    changeLanguage("ar");
+    setArClass(true);
+  };
 
+  function SwitchTheme({ isOn, ...props }) {
+    const className = `switch ${isOn ? "on" : "off"}`;
+
+    return (
+      <motion.div animate className={className} {...props}>
+        <motion.div
+          animate
+          className="flex items-center justify-center transition duration-300"
+        >
+          {isOn ? <MdNightlight color="black" /> : <LuSunMoon color="black" />}
+        </motion.div>
+      </motion.div>
+    );
+  }
+
+  useEffect(() => {
+    document.body.style.backgroundColor = isOn ? "#1c1c1c" : "#ffffff";
+  }, [isOn]);
+
+  const handleToggle = () => {
+    setIsOn(!isOn);
+    setIsLight(!isLight);
+  };
+
+  const switchLangAr = () => {
+    setIsArabic(!isArabic);
+    if (isArabic) {
+      arFunc();
+    } else {
+      enFunc();
+    }
+  };
   return (
     <div className=" bg-transparent fixed w-full top-0 flex items-center justify-center pt-5">
       <div className="header-bg w-[95%] rounded-[10px]">
         {/* Mobile menu */}
-        <MobileMenu open={open} setOpen={setOpen} classNames={classNames} />
+        <MobileMenu
+          open={open}
+          setOpen={setOpen}
+          isArabic={isArabic}
+          switchLangAr={switchLangAr}
+        />
 
         <header className="relative bg-primaryHover text-white">
           <nav
@@ -64,20 +117,39 @@ export default function Header() {
 
                 {/* Flyout menus */}
                 <Popover.Group className="hidden lg:ml-8 lg:block lg:self-center">
-                  <div className="flex h-full space-x-8 gap-8">
-                    {navigations.map((page) => (
-                      <NavLink
-                        key={page.name}
-                        to={page.navlink}
-                        className="flex items-center text-lg font-medium text-textWhite hover:text-gray-400"
-                      >
-                        {page.name}
-                      </NavLink>
-                    ))}
+                  <div
+                    dir={!isArabic ? "rtl" : "ltr"}
+                    className="flex h-full space-x-8 gap-8"
+                  >
+                    {isArabic
+                      ? navigations.map((page) => (
+                          <NavLink
+                            key={page.name}
+                            to={page.navlink}
+                            className="flex items-center text-lg font-medium text-textWhite hover:text-gray-400 py-1 px-3 rounded"
+                          >
+                            {page.name}
+                          </NavLink>
+                        ))
+                      : navigationsAr.map((page) => (
+                          <NavLink
+                            key={page.name}
+                            to={page.navlink}
+                            className="flex items-center text-lg font-medium text-textWhite hover:text-gray-400 py-1 px-3 rounded"
+                          >
+                            {page.name}
+                          </NavLink>
+                        ))}
                   </div>
                 </Popover.Group>
-                <div className="text-lg">
-                  <button>Light | Dark</button>
+                {/* Light and Dark */}
+                <div className="flex gap-5">
+                  <div>
+                    <SwitchTheme isOn={isOn} onClick={handleToggle} />
+                  </div>
+                  <div className="hidden lg:block">
+                    <SwitchLang isArabic={isArabic} onClick={switchLangAr} />
+                  </div>
                 </div>
               </div>
             </div>

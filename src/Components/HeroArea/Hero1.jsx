@@ -8,14 +8,14 @@ const Hero1 = () => {
 
   return (
     <div className="mainHeroDiv">
-      <div className="threeDiv">
-        <div className="centerHeroArea">
+      <div className="flex h-full justify-center items-center">
+        <div className="flex justify-center items-center text-center">
           <div>
-            <h2 className=" ">
+            <h2 className=" text-3xl">
               {t("fname")} <span>{t("lname")}</span>
             </h2>
-            <h3 className=" ">{t("frontend")}</h3>
-            <div className="heroPara  ">
+            <h3 className=" text-xl mt-2 uppercase">{t("frontend")}</h3>
+            <div className="w-[90vw] lg:w-[60vw] text-xl">
               <p>
                 {t("aboutmeInhome1")} <span>{t("react")}</span>
                 {t("and")}
@@ -23,11 +23,11 @@ const Hero1 = () => {
                 {t("aboutmeInhome2")}
               </p>
             </div>
-            <div className="resumeDownload  ">
-              <div className="flex justify-center items-center gap-2">
+            <div className="mt-5">
+              <button className="flex justify-center items-center gap-2 transition duration-200 m-auto border border-[#00ffff] rounded px-10 py-2 hover:bg-[#00ffff] hover:text-[#121212]">
                 <ImDownload3 />
                 {t("resume")}
-              </div>
+              </button>
             </div>
           </div>
         </div>
