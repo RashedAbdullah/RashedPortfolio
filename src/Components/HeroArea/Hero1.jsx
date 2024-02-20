@@ -11,13 +11,11 @@ const Hero1 = () => {
       <div className="threeDiv">
         <div className="centerHeroArea">
           <div>
-            <h2 className="animate__animated animate__fadeInDown">
+            <h2 className=" ">
               {t("fname")} <span>{t("lname")}</span>
             </h2>
-            <h3 className="animate__animated animate__fadeInDown">
-              {t("frontend")}
-            </h3>
-            <div className="heroPara animate__animated animate__fadeInUp">
+            <h3 className=" ">{t("frontend")}</h3>
+            <div className="heroPara  ">
               <p>
                 {t("aboutmeInhome1")} <span>{t("react")}</span>
                 {t("and")}
@@ -25,7 +23,7 @@ const Hero1 = () => {
                 {t("aboutmeInhome2")}
               </p>
             </div>
-            <div className="resumeDownload animate__animated animate__fadeInUp">
+            <div className="resumeDownload  ">
               <div className="flex justify-center items-center gap-2">
                 <ImDownload3 />
                 {t("resume")}

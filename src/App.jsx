@@ -1,15 +1,13 @@
-import './css/MainCSS.css';
-import Header from "./Components/Navbar/Navbar"
-import Hero1 from './Components/HeroArea/Hero1';
-import Footer from './Components/Footer/Footer';
+import "./css/MainCSS.css";
+// import Header from "./Components/Navbar/Navbar"
+import Hero1 from "./Components/HeroArea/Hero1";
+import Footer from "./Components/Footer/Footer";
 import Skills from "./Components/Skills/Skills";
-import Projects from './Components/Projects/Projects';
-import Contact from './Components/Cotacts/Contact';
-import About from './Components/About/About';
-
+import Projects from "./Components/Projects/Projects";
+import Contact from "./Components/Cotacts/Contact";
+import About from "./Components/About/About";
+import Header from "./Components/header/header";
 function App() {
-
-
   return (
     <div>
       <Header />
@@ -20,7 +18,7 @@ function App() {
       <About />
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -35,15 +35,10 @@ const Contact = () => {
     <div className="mainContactBox">
       <div>
         <div className="contactHeadline">
-          <h3 className="projectHead animate__animated animate__flipInX">
-            {t("talk")}
-          </h3>
+          <h3 className="projectHead  ">{t("talk")}</h3>
         </div>
         <div className="formAndConcatBox">
-          <div
-            style={isLight ? light : dark}
-            className="formbox animate__animated animate__fadeInUp"
-          >
+          <div style={isLight ? light : dark} className="formbox  ">
             <form action="">
               <div className="flex items-center">
                 <span>
@@ -86,10 +81,7 @@ const Contact = () => {
             </form>
           </div>
 
-          <div
-            style={isLight ? light : dark}
-            className="ContactBox animate__animated animate__fadeInUp"
-          >
+          <div style={isLight ? light : dark} className="ContactBox  ">
             <div>
               <p>{t("suggestion")}</p>
             </div>

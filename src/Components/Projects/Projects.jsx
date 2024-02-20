@@ -30,7 +30,7 @@ const Projects = () => {
 
   return (
     <div className="projectsMainDiv1">
-      <div className="projectHead animate__animated animate__flipInX">
+      <div className="projectHead  ">
         <h2>{t("projects")}</h2>
       </div>
       <div className="projectsMainDiv2">
@@ -38,7 +38,7 @@ const Projects = () => {
           <div
             key={project.id}
             style={isLight ? light : dark}
-            className="ProjectCard animate__animated animate__fadeInUp"
+            className="ProjectCard  "
           >
             <div className="projectsImgBox">
               <img src={CodeImg} alt="" />
