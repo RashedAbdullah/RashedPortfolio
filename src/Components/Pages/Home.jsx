@@ -41,7 +41,7 @@ const Home = () => {
           isLight={isLight}
           setIsLight={setIsLight}
         />
-        <Hero1 />
+        <Hero1 arClass={arClass} />
         <Projects />
         {/* <Skills /> */}
         <Contact />
